@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TODO : by Siddhartha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container" class="container">
+      <div>  <h1 style="display: inline; font-size: 42px">To-Do List</h1>
+        <img src="https://gamemath.com/light_dark_toggle.png"alt="dark-mode" style="float: right; height: 50px; width: 50px ; display: inline;" onclick="DarkMode()">
+      </div>
+        <div class="add-task">
+            <input id="task" type="text" placeholder="Add a new task"
+                style="width: 400px; height: 30px; background-color:whitesmoke;">
+            <button id="add" onclick="MyFunction()">Add</button>
+        </div>
+        <ul id="task-list">
+            <!-- Tasks will be added here dynamically using JavaScript -->
+            <div class="task_template" id="panel">
+                <li style="background-color: whitesmoke; border-radius: 25px;">
+                    Task-1
+                </li>
+                <li style="background-color:  whitesmoke; border-radius: 25px;">
+                    Task-2
+                </li>
+                <li style="background-color: whitesmoke; border-radius: 25px;">
+                    Task-3
+                </li>
+                <li style="background-color: whitesmoke; border-radius: 25px;">
+                    Task-4
+                </li>
+                <li style="background-color: whitesmoke; border-radius: 25px;">
+                    Task-5
+                </li>
+                <li style="background-color:whitesmoke; border-radius: 25px;">
+                    Task-6
+                </li>
+                <li style="background-color: whitesmoke; border-radius: 25px;">
+                    .......
+                </li>
+                <li style="background-color: whitesmoke; border-radius: 25px;">
+                    Task-n
+                </li>
+                <br>
+            </div>
+        </ul>
+        <div class="task-actions">
+            <button id="filter-all">Display All</button>
+            <button id="filter-active">Display Active</button>
+            <button id="filter-completed">Display Completed</button>
+            <button id="clear-completed">Clear Completed</button>
+        </div>
+    </div>
+    <script>
+        function MyFunction() {
+            document.getElementById("panel").style.display = "none";
+        }
+        function DarkMode()
+        {
+            let ele=document.getElementById("container");
+             ele.classList.toggle("dark-mode");
+        }
+    </script>
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
